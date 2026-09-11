@@ -1,0 +1,23 @@
+{
+  "file": "testdata/test_qpsk_snr.iq",
+  "fs_hz": 1000000.0,
+  "baud_hz": 125000.0,
+  "sps": 8,
+  "alpha": 0.35,
+  "cfo_hz": 7300.0,
+  "snr_db_target": 5.0,
+  "modulation": "QPSK",
+  "samples": 68352,
+  "group_bits": 8288,
+  "total_bits": 17088,
+  "asm_hex": "1ACFFC1D",
+  "crc_algo": "CRC-16/CCITT-FALSE",
+  "fec_polynomials": [
+    121,
+    91
+  ],
+  "n_blocks_per_group": 2,
+  "rows_per_block": 64,
+  "k_info": 26,
+  "payload_hex": "4e54524f2d53594e54482d5631aaf912da04acce2dbf4cc3066759d1a3eaf18f5de5e69e77739c6f145f1fd95e1a36b9a4c7dcdb5a286bc0d45c675fca5c5b55b4a881b7e71720a1b8ce04672d4fb3c3dba2e71ca70d1d3519f6915d4c3194692ab2d58af771965bbad44c7beb18dd5148d46dc8a20029ab9afb0cb3c06150361ed61ce18335c900a524df6dd31449f5a74211c9721b5ecb75b669bc560ddb40282a6724479797682595f6f039da7792dac1ee9b8676227317b840506e1a3352458434c6a9737f8ed48b83490341de3f7781979c72bb969efd2d7d7c5d58c74b2abd930532a2d6407a35214998e9d99953d8ae706f06b8cca9413ecc4c9cd7f8f67f4b9c355b326cefb95ce7df6411fdf4847d26cc871c5a874b53519b40fae934f3825858bbbc907625c862f29e8f76cbe67f399078b05598f589c96ee9f5606b6bdd83e620990f016c62c05127b88a6845b82cb29a1072696a875650d20a0f14f423f54238bf101bfc4e6ab334d7856df420573a7f66418a667a3c7e2baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab30e"
+}

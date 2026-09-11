@@ -1,0 +1,63 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "ci16_le",
+    "core:num_samples": 131072,
+    "core:description": "PS-26147 Phase-1 ingest of demo_stereo.wav (wav_stereo_iq)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      0.06009499356150627,
+      0.03967735916376114
+    ]
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:08.810540Z"
+    }
+  ],
+  "annotations": [
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": -318289.19440371625,
+      "core:freq_upper_edge": -181423.00158793974,
+      "ntro:carrier_hz": -252165.97465125448,
+      "ntro:bandwidth_hz": 136866.1928157765,
+      "ntro:snr_db": 15.457348752508139,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 125000.71209489265,
+      "ntro:baud_method": "phase_transition",
+      "ntro:baud_confidence": 0.9977019010659229,
+      "ntro:modulation_family": "PSK",
+      "ntro:modulation_subtype": "QPSK",
+      "ntro:amc_confidence": 0.6439922930277301,
+      "ntro:c40_abs": 1.2446320099472983,
+      "ntro:c42_abs": 0.8462156854214212,
+      "ntro:c63_abs": 4.546169346532028,
+      "ntro:evm_pct": 29.1,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_stereo_det1_psk_syms.cf32"
+    },
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 119703.72694574692,
+      "core:freq_upper_edge": 120300.16385093203,
+      "ntro:carrier_hz": 119999.2174911717,
+      "ntro:bandwidth_hz": 596.4369051851099,
+      "ntro:snr_db": 46.854045162525125,
+      "ntro:bandwidth_method": "10dB-down"
+    }
+  ]
+}

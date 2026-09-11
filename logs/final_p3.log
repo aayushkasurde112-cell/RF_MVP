@@ -1,0 +1,191 @@
+INFO    main: synthesized 7 demo captures in /home/user/ntro_rf_mvp/testdata
+INFO    ingestion: demo_cf32.iq: datatype auto-guessed as 'cf32_le'
+INFO    metadata: wrote demo_cf32.sigmf-meta
+INFO    ingestion: demo_cs16.iq: cf32 probe failed (bytes are not float32 IQ) -- descending ladder to cs16
+INFO    ingestion: demo_cs16.iq: datatype auto-guessed as 'cs16'
+INFO    metadata: wrote demo_cs16.sigmf-meta
+INFO    metadata: wrote demo_cu8.sigmf-meta
+INFO    metadata: wrote demo_mono.sigmf-meta
+INFO    metadata: wrote demo_stereo.sigmf-meta
+INFO    ingestion: demo_multiclass.iq: datatype auto-guessed as 'cf32_le'
+WARNING ingestion: float capture peak 2.55 > 1.0 -- peak-normalizing
+
+==============================================================================
+PS-26147 demo -- synthetic scenes (seed 26147), ground truth:
+  [phase 1] CW @ +120 kHz | QPSK @ -250 kHz, baud 125 kHz | AWGN sigma=0.05 | DC 0.06+0.04j
+  [phase 2] BPSK baud 100.0 kHz @ +80 kHz | 16QAM baud 62.5 kHz @ -180 kHz |
+            4FSK baud 40.0 kHz @ +230 kHz | rect-QPSK baud 100.0 kHz @ -40 kHz
+==============================================================================
+
+== demo_cf32.iq ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [cf32_le, auto-guessed]
+  DC block : removed I=+0.0601, Q=+0.0397 (LO leakage)
+  noise floor   -82.9 dB/Hz   sigma_MAD  0.73 dB   threshold   -78.5 dB/Hz (median + 6 sigma)
+    detection #1: carrier    -252.17 kHz  center    -249.86 kHz  bw[10dB-down]   136.87 kHz  peak   -67.5 dB/Hz  SNR  15.5 dB
+    detection #2: carrier    +120.00 kHz  center    +120.00 kHz  bw[10dB-down]     0.60 kHz  peak   -36.1 dB/Hz  SNR  46.9 dB
+  detection #1 @ -249.9 kHz (BW 136.9 kHz, SNR 12.8 dB):
+    symbol rate :   125.00 kHz  [phase_transition, line 38.3 dB, conf 1.00]
+    AMC         : PSK/QPSK (conf 0.65)  ranked: PSK 0.65  QAM 0.24  FSK 0.12
+    cumulants   : |C40| 1.25  |C42| 0.85  |C63| 4.55   (16383 symbols, env-mod 0.92 dB, 1 freq state(s))
+    sync         : 16312 symbols @ 1 sps, EVM 29.1%  [QPSK slicer, CFO -143.8 Hz, timing open_loop] -> demo_cf32_det1_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.5973, -0.6493)
+      (-1.1445, +0.5186)
+      (-0.7442, -0.4472)
+      (+0.5976, +0.8537)
+      (-0.4841, +0.9191)
+      (+0.8317, -0.7093)
+      (+0.8346, -0.7525)
+      (+0.3698, -0.9899)
+  detection #2: skipped (SNR 46.9 dB / BW 0.6 kHz below extraction floor)
+
+== demo_cs16.iq ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [cs16, auto-guessed]
+  DC block : removed I=+0.0601, Q=+0.0397 (LO leakage)
+  noise floor   -82.9 dB/Hz   sigma_MAD  0.73 dB   threshold   -78.5 dB/Hz (median + 6 sigma)
+    detection #1: carrier    -252.17 kHz  center    -249.86 kHz  bw[10dB-down]   136.87 kHz  peak   -67.5 dB/Hz  SNR  15.5 dB
+    detection #2: carrier    +120.00 kHz  center    +120.00 kHz  bw[10dB-down]     0.60 kHz  peak   -36.1 dB/Hz  SNR  46.9 dB
+  detection #1 @ -249.9 kHz (BW 136.9 kHz, SNR 12.8 dB):
+    symbol rate :   125.00 kHz  [phase_transition, line 38.3 dB, conf 1.00]
+    AMC         : PSK/QPSK (conf 0.64)  ranked: PSK 0.64  QAM 0.24  FSK 0.12
+    cumulants   : |C40| 1.24  |C42| 0.85  |C63| 4.55   (16383 symbols, env-mod 0.92 dB, 1 freq state(s))
+    sync         : 16312 symbols @ 1 sps, EVM 29.1%  [QPSK slicer, CFO -143.8 Hz, timing open_loop] -> demo_cs16_det1_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.5972, -0.6493)
+      (-1.1446, +0.5187)
+      (-0.7442, -0.4472)
+      (+0.5976, +0.8537)
+      (-0.4841, +0.9190)
+      (+0.8318, -0.7093)
+      (+0.8346, -0.7525)
+      (+0.3699, -0.9899)
+  detection #2: skipped (SNR 46.9 dB / BW 0.6 kHz below extraction floor)
+
+== demo_cu8.iq ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [cu8]
+  DC block : removed I=+0.0601, Q=+0.0397 (LO leakage)
+  noise floor   -82.9 dB/Hz   sigma_MAD  0.73 dB   threshold   -78.5 dB/Hz (median + 6 sigma)
+    detection #1: carrier    -252.17 kHz  center    -249.86 kHz  bw[10dB-down]   136.87 kHz  peak   -67.5 dB/Hz  SNR  15.4 dB
+    detection #2: carrier    +120.00 kHz  center    +120.00 kHz  bw[10dB-down]     0.60 kHz  peak   -36.1 dB/Hz  SNR  46.8 dB
+  detection #1 @ -249.9 kHz (BW 136.9 kHz, SNR 12.8 dB):
+    symbol rate :   125.00 kHz  [phase_transition, line 38.2 dB, conf 1.00]
+    AMC         : PSK/QPSK (conf 0.64)  ranked: PSK 0.64  QAM 0.24  FSK 0.12
+    cumulants   : |C40| 1.22  |C42| 0.85  |C63| 4.55   (16383 symbols, env-mod 0.92 dB, 1 freq state(s))
+    sync         : 16312 symbols @ 1 sps, EVM 29.1%  [QPSK slicer, CFO -141.7 Hz, timing open_loop] -> demo_cu8_det1_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.6037, -0.6464)
+      (-1.1376, +0.5305)
+      (-0.7429, -0.4611)
+      (+0.5969, +0.8414)
+      (-0.4849, +0.9116)
+      (+0.8321, -0.7181)
+      (+0.8438, -0.7438)
+      (+0.3756, -0.9835)
+  detection #2: skipped (SNR 46.8 dB / BW 0.6 kHz below extraction floor)
+
+== demo_mono.wav ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [wav_mono_hilbert]
+  DC block : removed I=-0.0001, Q=-0.0000 (LO leakage)
+  analysis band : [0, 500] kHz (analytic signal: dead half-band excluded)
+  noise floor   -80.0 dB/Hz   sigma_MAD  0.54 dB   threshold   -76.8 dB/Hz (median + 6 sigma)
+    detection #1: carrier    +120.00 kHz  center    +120.00 kHz  bw[10dB-down]     0.60 kHz  peak   -36.1 dB/Hz  SNR  43.9 dB
+  detection #1: skipped (SNR 43.9 dB / BW 0.6 kHz below extraction floor)
+
+== demo_stereo.wav ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [wav_stereo_iq]
+  DC block : removed I=+0.0601, Q=+0.0397 (LO leakage)
+  noise floor   -82.9 dB/Hz   sigma_MAD  0.73 dB   threshold   -78.5 dB/Hz (median + 6 sigma)
+    detection #1: carrier    -252.17 kHz  center    -249.86 kHz  bw[10dB-down]   136.87 kHz  peak   -67.5 dB/Hz  SNR  15.5 dB
+    detection #2: carrier    +120.00 kHz  center    +120.00 kHz  bw[10dB-down]     0.60 kHz  peak   -36.1 dB/Hz  SNR  46.9 dB
+  detection #1 @ -249.9 kHz (BW 136.9 kHz, SNR 12.8 dB):
+    symbol rate :   125.00 kHz  [phase_transition, line 38.3 dB, conf 1.00]
+    AMC         : PSK/QPSK (conf 0.64)  ranked: PSK 0.64  QAM 0.24  FSK 0.12
+    cumulants   : |C40| 1.24  |C42| 0.85  |C63| 4.55   (16383 symbols, env-mod 0.92 dB, 1 freq state(s))
+    sync         : 16312 symbols @ 1 sps, EVM 29.1%  [QPSK slicer, CFO -143.8 Hz, timing open_loop] -> demo_stereo_det1_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.5972, -0.6493)
+      (-1.1446, +0.5187)
+      (-0.7442, -0.4472)
+      (+0.5976, +0.8537)
+      (-0.4841, +0.9190)
+      (+0.8318, -0.7093)
+      (+0.8346, -0.7525)
+      (+0.3699, -0.9899)
+  detection #2: skipped (SNR 46.9 dB / BW 0.6 kHz below extraction floor)
+
+== demo_multiclass.iq ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [cf32_le, auto-guessed]
+  DC block : removed I=-0.0001, Q=+0.0000 (LO leakage)
+  noise floor   -83.1 dB/Hz   sigma_MAD  1.50 dB   threshold   -74.1 dB/Hz (median + 6 sigma)
+    detection #1: carrier    -158.39 kHz  center    -180.11 kHz  bw[10dB-down]    72.01 kHz  peak   -61.0 dB/Hz  SNR  22.1 dB
+    detection #2: carrier     +50.77 kHz  center     +79.96 kHz  bw[10dB-down]   120.77 kHz  peak   -63.8 dB/Hz  SNR  19.4 dB
+    detection #3: carrier    +173.61 kHz  center    +173.83 kHz  bw[threshold-region]     0.49 kHz  peak   -73.7 dB/Hz  SNR   9.4 dB
+    detection #4: carrier    +244.40 kHz  center    +231.04 kHz  bw[10dB-down]   111.20 kHz  peak   -62.9 dB/Hz  SNR  20.2 dB
+  detection #1 @ -180.1 kHz (BW 72.0 kHz, SNR 21.7 dB):
+    symbol rate :    62.50 kHz  [envelope_spectrum, line 37.2 dB, conf 1.00]
+    AMC         : QAM/16QAM (conf 0.76)  ranked: QAM 0.76  PSK 0.18  FSK 0.07
+    cumulants   : |C40| 0.71  |C42| 0.65  |C63| 3.95   (8191 symbols, env-mod 1.34 dB, 1 freq state(s))
+    sync         : 8120 symbols @ 1 sps, EVM 13.1%  [16QAM slicer, CFO +106.9 Hz, timing open_loop] -> demo_multiclass_det1_qam_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (+0.9293, +0.9964)
+      (-0.9315, +0.9500)
+      (+0.8960, -0.3828)
+      (+1.0391, -0.8150)
+      (+0.2628, -1.0511)
+      (+0.4522, +0.3045)
+      (+0.2937, +0.9758)
+      (-0.8285, -0.2515)
+  detection #2 @ +80.0 kHz (BW 120.8 kHz, SNR 16.5 dB):
+    symbol rate :   100.00 kHz  [phase_transition, line 41.9 dB, conf 1.00]
+    AMC         : PSK/BPSK (conf 0.88)  ranked: PSK 0.88  FSK 0.12  QAM 0.00
+    cumulants   : |C40| 2.13  |C42| 1.96  |C63| 13.58   (13106 symbols, env-mod 0.90 dB, 1 freq state(s))
+    sync         : 13071 symbols @ 1 sps, EVM 12.8%  [BPSK slicer, CFO +39.3 Hz, timing gardner_track] -> demo_multiclass_det2_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.9734, +0.0150)
+      (-1.1159, +0.0059)
+      (+1.0417, -0.0914)
+      (+1.0248, -0.0656)
+      (-0.8440, -0.0799)
+      (+0.9339, -0.0701)
+      (+1.0952, -0.1061)
+      (-1.0260, -0.0879)
+  detection #3: skipped (SNR 9.4 dB / BW 0.5 kHz below extraction floor)INFO    metadata: wrote demo_multiclass.sigmf-meta
+INFO    ingestion: demo_zerorolloff.iq: datatype auto-guessed as 'cf32_le'
+INFO    metadata: wrote demo_zerorolloff.sigmf-meta
+
+  detection #4 @ +231.0 kHz (BW 111.2 kHz, SNR 14.8 dB):
+    symbol rate :    40.00 kHz  [phase_transition, line 31.4 dB, conf 0.99]
+    AMC         : FSK (conf 0.74)  ranked: FSK 0.74  PSK 0.13  QAM 0.13
+    cumulants   : |C40| 0.00  |C42| 0.00  |C63| 0.00   (0 symbols, env-mod 0.15 dB, 4 freq state(s))
+    sync         : 5241 symbols @ 1 sps (non-coherent FSK, 4 tones, timing R^2 0.98) -> demo_multiclass_det4_fsk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.0000, -1.0000)
+      (-0.0000, -1.0000)
+      (-1.0000, +0.0000)
+      (-1.0000, +0.0000)
+      (-1.0000, +0.0000)
+      (+1.0000, +0.0000)
+      (-1.0000, +0.0000)
+      (-0.0000, -1.0000)
+
+== demo_zerorolloff.iq ==
+  ingested : 131072 cplx samples  @ 1.000 MS/s  [cf32_le, auto-guessed]
+  DC block : removed I=-0.0033, Q=+0.0016 (LO leakage)
+  noise floor   -75.2 dB/Hz   sigma_MAD  1.50 dB   threshold   -66.2 dB/Hz (median + 6 sigma)
+    detection #1: carrier     -49.80 kHz  center     -38.86 kHz  bw[10dB-down]   142.32 kHz  peak   -54.2 dB/Hz  SNR  21.0 dB
+  detection #1 @ -38.9 kHz (BW 142.3 kHz, SNR 15.1 dB):
+    symbol rate :   100.00 kHz  [envelope_spectrum, line 46.9 dB, conf 1.00]
+    AMC         : PSK/QPSK (conf 0.58)  ranked: PSK 0.58  QAM 0.22  FSK 0.20
+    cumulants   : |C40| 1.13  |C42| 0.94  |C63| 4.84   (13106 symbols, env-mod 0.36 dB, 1 freq state(s))
+    sync         : 13035 symbols @ 1 sps, EVM 18.1%  [QPSK slicer, CFO -1140.9 Hz, timing open_loop] -> demo_zerorolloff_det1_psk_syms.cf32
+    first 8 synchronized symbols (I, Q):
+      (-0.8562, +0.6373)
+      (-0.8369, +0.7546)
+      (-0.7985, -0.5163)
+      (-0.7844, +0.5321)
+      (-0.8115, -0.5623)
+      (-0.8458, +0.5519)
+      (-0.8022, -0.6464)
+      (-0.7859, -0.7180)
+
+SigMF sidecars (with ntro:baud/modulation annotations) written next to each capture in /home/user/ntro_rf_mvp/testdata

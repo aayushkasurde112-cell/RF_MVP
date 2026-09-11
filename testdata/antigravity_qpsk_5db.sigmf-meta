@@ -1,0 +1,29 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "cf32_le",
+    "core:num_samples": 68352,
+    "core:description": "PS-26147 Phase-1 ingest of antigravity_qpsk_5db.iq (cf32_le)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      6.997774471528828e-05,
+      0.0006706006824970245
+    ],
+    "ntro:datatype_auto_guessed": true
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:59.958280Z"
+    }
+  ],
+  "annotations": []
+}

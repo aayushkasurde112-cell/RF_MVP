@@ -1,0 +1,40 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "ri16_le",
+    "core:num_samples": 131072,
+    "core:description": "PS-26147 Phase-1 ingest of demo_mono.wav (wav_mono_hilbert)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      -8.986796456156299e-05,
+      -2.546585164964199e-11
+    ]
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:07.733073Z"
+    }
+  ],
+  "annotations": [
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 119703.00686677017,
+      "core:freq_upper_edge": 120300.04654211349,
+      "ntro:carrier_hz": 119999.16328059636,
+      "ntro:bandwidth_hz": 597.039675343316,
+      "ntro:snr_db": 43.93316021835464,
+      "ntro:bandwidth_method": "10dB-down"
+    }
+  ]
+}

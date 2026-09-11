@@ -1,0 +1,29 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "cf32_le",
+    "core:num_samples": 68352,
+    "core:description": "PS-26147 Phase-1 ingest of test_qpsk_12.iq (cf32_le)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      6.61624944768846e-05,
+      0.000752670515794307
+    ],
+    "ntro:datatype_auto_guessed": true
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:41:21.024565Z"
+    }
+  ],
+  "annotations": []
+}

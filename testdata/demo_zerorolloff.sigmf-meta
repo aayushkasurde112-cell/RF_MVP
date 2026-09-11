@@ -1,0 +1,53 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "cf32_le",
+    "core:num_samples": 131072,
+    "core:description": "PS-26147 Phase-1 ingest of demo_zerorolloff.iq (cf32_le)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      -0.003277749987319112,
+      0.0015637008473277092
+    ],
+    "ntro:datatype_auto_guessed": true
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:11.947291Z"
+    }
+  ],
+  "annotations": [
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": -110021.26708959746,
+      "core:freq_upper_edge": 32303.623886034686,
+      "ntro:carrier_hz": -49799.458213156315,
+      "ntro:bandwidth_hz": 142324.89097563215,
+      "ntro:snr_db": 21.006189579521006,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 99998.96373508223,
+      "ntro:baud_method": "envelope_spectrum",
+      "ntro:baud_confidence": 0.9997329223843342,
+      "ntro:modulation_family": "PSK",
+      "ntro:modulation_subtype": "QPSK",
+      "ntro:amc_confidence": 0.584137041232622,
+      "ntro:c40_abs": 1.1262274779208286,
+      "ntro:c42_abs": 0.944907763436965,
+      "ntro:c63_abs": 4.840893047000677,
+      "ntro:evm_pct": 18.12,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_zerorolloff_det1_psk_syms.cf32"
+    }
+  ]
+}

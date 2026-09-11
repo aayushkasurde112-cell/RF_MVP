@@ -1,0 +1,109 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "cf32_le",
+    "core:num_samples": 131072,
+    "core:description": "PS-26147 Phase-1 ingest of demo_multiclass.iq (cf32_le)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      -5.342924123397097e-05,
+      7.209469913505018e-06
+    ],
+    "ntro:datatype_auto_guessed": true
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:10.894321Z"
+    }
+  ],
+  "annotations": [
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": -216113.79749753882,
+      "core:freq_upper_edge": -144100.4694801058,
+      "ntro:carrier_hz": -158387.1716393627,
+      "ntro:bandwidth_hz": 72013.32801743303,
+      "ntro:snr_db": 22.106417594704254,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 62499.9489502646,
+      "ntro:baud_method": "envelope_spectrum",
+      "ntro:baud_confidence": 0.9969911647007361,
+      "ntro:modulation_family": "QAM",
+      "ntro:modulation_subtype": "16QAM",
+      "ntro:amc_confidence": 0.7551966917280922,
+      "ntro:c40_abs": 0.7097934820287166,
+      "ntro:c42_abs": 0.6535446169023434,
+      "ntro:c63_abs": 3.948658752109748,
+      "ntro:evm_pct": 13.05,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_multiclass_det1_qam_syms.cf32"
+    },
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 19572.920359328906,
+      "core:freq_upper_edge": 140347.48668433639,
+      "ntro:carrier_hz": 50769.522051096705,
+      "ntro:bandwidth_hz": 120774.56632500747,
+      "ntro:snr_db": 19.3513098425356,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 99999.4601818573,
+      "ntro:baud_method": "phase_transition",
+      "ntro:baud_confidence": 0.9990723604270337,
+      "ntro:modulation_family": "PSK",
+      "ntro:modulation_subtype": "BPSK",
+      "ntro:amc_confidence": 0.879018343554075,
+      "ntro:c40_abs": 2.129367397869121,
+      "ntro:c42_abs": 1.9576308086259775,
+      "ntro:c63_abs": 13.57847224655059,
+      "ntro:evm_pct": 12.81,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_multiclass_det2_psk_syms.cf32"
+    },
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 173583.984375,
+      "core:freq_upper_edge": 174072.265625,
+      "ntro:carrier_hz": 173612.58756646112,
+      "ntro:bandwidth_hz": 488.28125,
+      "ntro:snr_db": 9.365531855326509,
+      "ntro:bandwidth_method": "threshold-region"
+    },
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 175442.48581036107,
+      "core:freq_upper_edge": 286646.1805780888,
+      "ntro:carrier_hz": 244400.70144844538,
+      "ntro:bandwidth_hz": 111203.69476772772,
+      "ntro:snr_db": 20.235085952667816,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 40000.73015433105,
+      "ntro:baud_method": "phase_transition",
+      "ntro:baud_confidence": 0.9873026494301296,
+      "ntro:modulation_family": "FSK",
+      "ntro:modulation_subtype": null,
+      "ntro:amc_confidence": 0.7372769190986207,
+      "ntro:c40_abs": 0.0,
+      "ntro:c42_abs": 0.0,
+      "ntro:c63_abs": 0.0,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_multiclass_det4_fsk_syms.cf32"
+    }
+  ]
+}

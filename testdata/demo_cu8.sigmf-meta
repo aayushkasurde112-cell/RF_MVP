@@ -1,0 +1,63 @@
+{
+  "global": {
+    "core:version": "1.0.0",
+    "core:datatype": "cu8",
+    "core:num_samples": 131072,
+    "core:description": "PS-26147 Phase-1 ingest of demo_cu8.iq (cu8)",
+    "core:extensions": [
+      {
+        "name": "ntro",
+        "version": "0.1.0",
+        "optional": true
+      }
+    ],
+    "core:sample_rate": 1000000.0,
+    "ntro:dc_method": "record_mean",
+    "ntro:dc_removed_iq": [
+      0.060088273137807846,
+      0.039663996547460556
+    ]
+  },
+  "captures": [
+    {
+      "core:sample_start": 0,
+      "core:datetime": "2026-09-11T14:44:07.723999Z"
+    }
+  ],
+  "annotations": [
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": -318292.72254572815,
+      "core:freq_upper_edge": -181423.42646121056,
+      "ntro:carrier_hz": -252165.90845922625,
+      "ntro:bandwidth_hz": 136869.29608451758,
+      "ntro:snr_db": 15.446451734484057,
+      "ntro:bandwidth_method": "10dB-down",
+      "ntro:baud_hz": 125000.70676719314,
+      "ntro:baud_method": "phase_transition",
+      "ntro:baud_confidence": 0.9976699577907302,
+      "ntro:modulation_family": "PSK",
+      "ntro:modulation_subtype": "QPSK",
+      "ntro:amc_confidence": 0.6382442609072906,
+      "ntro:c40_abs": 1.2207902973032223,
+      "ntro:c42_abs": 0.8461164767157362,
+      "ntro:c63_abs": 4.545690735802619,
+      "ntro:evm_pct": 29.09,
+      "ntro:sync_ok": true,
+      "ntro:symbols_file": "demo_cu8_det1_psk_syms.cf32"
+    },
+    {
+      "core:sample_start": 0,
+      "core:sample_length": 131072,
+      "core:label": "detected_emission (baseband offset)",
+      "core:freq_lower_edge": 119703.72012867681,
+      "core:freq_upper_edge": 120300.15908408233,
+      "ntro:carrier_hz": 119999.21658076887,
+      "ntro:bandwidth_hz": 596.4389554055233,
+      "ntro:snr_db": 46.843142436049355,
+      "ntro:bandwidth_method": "10dB-down"
+    }
+  ]
+}
