@@ -2,7 +2,7 @@
   "global": {
     "core:version": "1.0.0",
     "core:datatype": "cf32_le",
-    "core:num_samples": 133632,
+    "core:num_samples": 136704,
     "core:description": "PS-26147 Phase-1 ingest of synthetic_bpsk.iq (cf32_le)",
     "core:extensions": [
       {
@@ -14,15 +14,14 @@
     "core:sample_rate": 1000000.0,
     "ntro:dc_method": "record_mean",
     "ntro:dc_removed_iq": [
-      0.0006961710168980062,
-      -0.00019026467634830624
-    ],
-    "ntro:datatype_auto_guessed": true
+      0.0003133998834528029,
+      0.0006091190152801573
+    ]
   },
   "captures": [
     {
       "core:sample_start": 0,
-      "core:datetime": "2026-09-11T14:32:35.541084Z"
+      "core:datetime": "2026-09-11T17:29:28.084875Z"
     }
   ],
   "annotations": []

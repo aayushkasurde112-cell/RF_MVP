@@ -1,5 +1,5 @@
 {
-  "file": "testdata/synthetic_bpsk.iq",
+  "file": "testdata/synth_ldpc_qpp.iq",
   "fs_hz": 1000000.0,
   "baud_hz": 125000.0,
   "sps": 8,
@@ -7,13 +7,13 @@
   "cfo_hz": 7300.0,
   "snr_db_target": 13.0,
   "modulation": "BPSK",
-  "samples": 136704,
-  "group_bits": 8288,
-  "total_bits": 17088,
+  "samples": 112384,
+  "group_bits": 6768,
+  "total_bits": 14048,
   "asm_hex": "1ACFFC1D",
   "crc_algo": "CRC-16/CCITT-FALSE",
-  "fec_scheme": "convolutional",
-  "interleaver_scheme": "block",
+  "fec_scheme": "ldpc",
+  "interleaver_scheme": "qpp",
   "fec_polynomials": [
     121,
     91

@@ -16,49 +16,13 @@
     "ntro:dc_removed_iq": [
       0.060096848756074905,
       0.039678581058979034
-    ],
-    "ntro:datatype_auto_guessed": true
+    ]
   },
   "captures": [
     {
       "core:sample_start": 0,
-      "core:datetime": "2026-09-11T14:44:05.568866Z"
+      "core:datetime": "2026-09-11T18:12:07.605260Z"
     }
   ],
-  "annotations": [
-    {
-      "core:sample_start": 0,
-      "core:sample_length": 131072,
-      "core:label": "detected_emission (baseband offset)",
-      "core:freq_lower_edge": -318289.1867074318,
-      "core:freq_upper_edge": -181422.9561400747,
-      "ntro:carrier_hz": -252165.97511884425,
-      "ntro:bandwidth_hz": 136866.2305673571,
-      "ntro:snr_db": 15.457366110497347,
-      "ntro:bandwidth_method": "10dB-down",
-      "ntro:baud_hz": 125000.71210684693,
-      "ntro:baud_method": "phase_transition",
-      "ntro:baud_confidence": 0.9977027884429239,
-      "ntro:modulation_family": "PSK",
-      "ntro:modulation_subtype": "QPSK",
-      "ntro:amc_confidence": 0.646153831605036,
-      "ntro:c40_abs": 1.2536751299869142,
-      "ntro:c42_abs": 0.8462173990534935,
-      "ntro:c63_abs": 4.546190489490598,
-      "ntro:evm_pct": 29.1,
-      "ntro:sync_ok": true,
-      "ntro:symbols_file": "demo_cf32_det1_psk_syms.cf32"
-    },
-    {
-      "core:sample_start": 0,
-      "core:sample_length": 131072,
-      "core:label": "detected_emission (baseband offset)",
-      "core:freq_lower_edge": 119703.7269554361,
-      "core:freq_upper_edge": 120300.16388996936,
-      "ntro:carrier_hz": 119999.21749483726,
-      "ntro:bandwidth_hz": 596.436934533267,
-      "ntro:snr_db": 46.85406803910415,
-      "ntro:bandwidth_method": "10dB-down"
-    }
-  ]
+  "annotations": []
 }

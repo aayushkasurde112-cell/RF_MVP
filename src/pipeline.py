@@ -288,18 +288,57 @@ def run_pipeline(path: str, fs: Optional[float] = None,
             progress(stage, pct, detail or {})
 
     emit("ingest", 0.02, {"path": str(path)})
-    iq = ingestion.load_iq(path, fs, datatype=datatype)   # robust: raises
-                                                          # IngestionError
-    if iq.sample_rate is None:
-        raise ingestion.IngestionError(
-            "sample rate unknown: pass fs (raw captures carry no header)")
+    p = Path(path)
+
+    # 1. Auto-discover fs and datatype from companion .sigmf-meta if not provided
+    meta_candidates = [
+        p.with_suffix(".sigmf-meta"),
+        Path(str(p) + ".sigmf-meta"),
+    ]
+    for mpath in meta_candidates:
+        if mpath.is_file():
+            try:
+                mdict = metadata.read_sigmf_meta(mpath)
+                g = mdict.get("global", {})
+                if fs is None and "core:sample_rate" in g:
+                    fs = float(g["core:sample_rate"])
+                if datatype is None and "core:datatype" in g:
+                    datatype = str(g["core:datatype"])
+                break
+            except Exception:
+                pass
+
+    # 2. Ingest capture (WAV audio container vs raw IQ)
+    if p.suffix.lower() == ".wav":
+        iq = ingestion.load_wav(p)
+        if fs is not None and fs > 0:
+            iq.sample_rate = float(fs)
+    else:
+        # If fs is still unknown for raw captures, fallback to standard 1.0 MS/s default
+        fallback_used = False
+        if fs is None or fs <= 0:
+            fs = 1_000_000.0  # 1 MS/s standard SDR default
+            fallback_used = True
+
+        iq = ingestion.load_iq(p, fs, datatype=datatype)
+        if fallback_used:
+            iq.notes["fs_defaulted"] = True
+
+    if iq.sample_rate is None or iq.sample_rate <= 0:
+        iq.sample_rate = 1_000_000.0
+        iq.notes["fs_defaulted"] = True
+
     emit("ingest", 0.06, {"n_samples": int(iq.samples.size),
                           "fs": float(iq.sample_rate),
                           "datatype": iq.datatype})
 
     # ---------------- Phase 1: spectral characterization -------------------
     emit("spectral", 0.10, {})
-    rep = spectral.characterize_spectrum(iq.samples, float(iq.sample_rate))
+    analysis_band = None
+    if iq.datatype == "wav_mono_hilbert" and iq.sample_rate:
+        analysis_band = (0.0, float(iq.sample_rate) / 2.0)
+    rep = spectral.characterize_spectrum(iq.samples, float(iq.sample_rate),
+                                        analysis_band=analysis_band)
     detections = sorted(rep.detections,
                         key=lambda d: -d.bandwidth_hz)  # widest first
     if center_hz is not None:   # Phase-1 lesson: wideband may split a burst
